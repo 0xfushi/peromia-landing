@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './EmailCaptureForm.css';
-import 'dotenv/config';
 
 
 const EmailCaptureForm = () => {
