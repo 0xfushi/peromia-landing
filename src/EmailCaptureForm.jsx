@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './EmailCaptureForm.css';
+import 'dotenv/config';
+
 
 const EmailCaptureForm = () => {
   const [email, setEmail] = useState('');
@@ -9,13 +11,13 @@ const EmailCaptureForm = () => {
     e.preventDefault();
 
     // Send email to Airtable using axios
-    axios.post('https://api.airtable.com/v0/<your-base-id>/Emails', {
+    axios.post('https://api.airtable.com/v0/${process.env.AIRTABLE_BASE_ID}/Emails', {
       fields: {
         Email: email,
       },
     }, {
       headers: {
-        'Authorization': 'Bearer <your-api-key>',
+        'Authorization': 'Bearer ${process.env.AIRTABLE_API_KEY}',
       },
     }).then(response => {
       console.log(response);
