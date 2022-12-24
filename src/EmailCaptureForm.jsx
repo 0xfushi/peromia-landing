@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './EmailCaptureForm.css';
 
 const EmailCaptureForm = () => {
   const [email, setEmail] = useState('');
@@ -24,12 +25,11 @@ const EmailCaptureForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="email-form">
       <label>
-        Email:
-        <input type="email" value={email} onChange={e => setEmail(e.target.value)} />
+        <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="Explorer@Peromia.com" />
       </label>
-      <button type="submit">Sign Up</button>
+      <button type="submit" className="signup-button">Get Updates</button>
     </form>
   );
 };

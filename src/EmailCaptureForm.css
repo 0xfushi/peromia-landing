@@ -1,0 +1,31 @@
+.email-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.email-form input[type="email"] {
+  width: 200px;
+  height: 40px;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+}
+
+.signup-button {
+  margin-left: 25px;
+  padding: 0 30px;
+  height: 40px;
+  background-color: #663399;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.signup-button:hover {
+  background-color: #c5a4e5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
